@@ -1,0 +1,9 @@
+<div class="margin">
+  <p [hidden]="testVariable !== ''">please fill the blank</p>
+  <p [hidden]="testVariable === ''">this is data-binding :  {{testVariable}}</p>
+</div>
+<label><b>name:</b></label>
+<div class="margin-label">
+<button class="btn btn-primary" [disabled]="!testButton">search</button>
+<input type="text" (input)="showResults($event)">
+</div>
