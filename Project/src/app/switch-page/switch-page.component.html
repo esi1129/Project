@@ -1,9 +1,53 @@
+<!--using selector as Element/class/property -->
+<!--data binding use {{}} & [property] & (Event)=func() -->
 <div class="margin">
   <p [hidden]="testVariable !== ''">please fill the blank</p>
   <p [hidden]="testVariable === ''">this is data-binding :  {{testVariable}}</p>
 </div>
 <label><b>name:</b></label>
 <div class="margin-label">
-<button class="btn btn-primary" [disabled]="!testButton">search</button>
-<input type="text" (input)="showResults($event)">
+  <button class="btn btn-primary" [disabled]="!testButton">search</button>
+  <input type="text" (input)="showResults($event)">
 </div>
+
+<!--Two way binding use [(ngModel)]= key -->
+
+<div class="margin">
+  <p [hidden]="name !== ''">please fill the blank</p>
+  <p [hidden]="name === ''">this is two-way-binding: {{name}}</p>
+</div>
+<label><b>name:</b></label>
+<div class="margin-label">
+  <button class="btn btn-primary" [disabled]="!testButton">search</button>
+  <input type="text" [(ngModel)]="name">
+</div>
+<br>
+<!--attribute binding -->
+
+<p [style.font-size.rem]="attributeBoolean ? 2 : 5 ">attribute binding</p>
+<p [style.font-size]="attributeBoolean ? '70px' : '50px' ">attribute binding</p>
+
+<p [style]="styles">attribute binding (object style)</p>
+
+<!--you can use defined classes instead one property in two upper way-->
+<!--directives-->
+<!--[ngStyle] is [style], style is better because [style.font-size]-->
+<!--[ngClass] is [style], use class instead property ,haven't difference when use class name in style-->
+<!--*ngIf="key" for showing tag like p or selectors by true or false (vs hidden)-->
+<!-- when use *ngIf ,ng-template <tag></tag> by using local ref #xxxx could help for using else like this : *ngIf = "checker; else xxxx"-->
+<!-- *ngFor -->
+
+<p *ngFor="let user of userObject; let i=index; trackBy: trackByFunc">{{ i + 1 + " -" + user.name + " with " + user.age}}</p>
+
+<!--index is a reserve word in ngFor-->
+<!--when use an object all of parameter destroy and create again so use trackBy in tag for better performance -->
+<!--trackBy no need any ()-->
+<button (click)="addUser()" >add</button>
+
+<!-- @ViewChild -->
+
+<p>{{number}}</p>
+<button (click)="increment()" >add number </button>
+
+
+

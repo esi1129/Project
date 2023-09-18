@@ -1,3 +1,26 @@
-<menu-component></menu-component>
-<switch-page-component></switch-page-component>
+
+
+
+
+
+
+
+
+<!--..................................................................................................................-->
+<nav>
+  <a routerLink="/menu">mm</a>
+  <a routerLink="/home">Heroes</a>
+
+</nav>
+<router-outlet></router-outlet>
+<p #app>...</p>
+
+<!--[ngSwitch] & *ngSwitchCase-->
+<!--using input variable-->
+<div [ngSwitch]="switchKey">
+  <menu-component *ngSwitchCase="'key1'"></menu-component>
+  <switch-page-component   *ngSwitchCase="'key2'"   [inputVariableName]= 40  (outputVariableName)="emptyFunc()"></switch-page-component>
+  <form-component *ngSwitchCase="'key3'"></form-component>
+</div>
+
 

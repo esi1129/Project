@@ -1,17 +1,99 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
-selector: 'switch-page-component',
-templateUrl: './switch-page.component.html',
-styleUrls: ['switch-page.component.css']
+  selector: 'switch-page-component',
+  templateUrl: './switch-page.component.html',
+  styleUrls: ['switch-page.component.css']
 })
-export class SwitchPageComponent {
+export class SwitchPageComponent implements OnInit {
 
-testVariable : String = "";
-testButton : Boolean = true;
+  //variables
 
-public showResults(e : Event){
-this.testVariable = (<HTMLInputElement>e.target).value
+  testVariable: String = "";
+  testButton: Boolean = true;
+  name: String = "";
+  attributeBoolean: Boolean = true;
+  number: number = 0;
+
+  //input & output
+
+  @Input('inputVariableName') inputVariable : number = 30
+
+  @Output('outputVariableName') outputVariable = new EventEmitter<number>()
+
+  //Arrays
+
+  users: Array<String> = ["test1", "test2"]
+  passwords: number[] = [110218213, 71566430, 24663938]
+
+  //objects
+
+  userObject: any = [
+    {
+      name: "user1",
+      age: 20
+    },
+    {
+      name: "user2",
+      age: 22
+    },
+    {
+      name: "user3",
+      age: 16
+    }
+  ]
+
+  //define a empty object as Json file
+
+  styles = {}
+
+  //using Json in Init
+
+  ngOnInit(): void {
+    this.styles = {
+      'font-size': '40px',
+      'color': 'red'
+    }
+  }
+
+  //define a function as event
+
+  public showResults(e: Event) {
+    this.testVariable = (<HTMLInputElement>e.target).value
+  };
+
+  //track by
+
+  public  addUser(){
+    this.userObject = [
+      {
+        name: "user1",
+        age: 20
+      },
+      {
+        name: "user2",
+        age: 22
+      },
+      {
+        name: "user3",
+        age: 16
+      },
+      {
+        name: "user4",
+        age: 19
+      }
+    ]
+  }
+
+  public trackByFunc(index: number,  el: any) {
+     return el.age;
+  }
+
+
+//viewChild
+
+  public increment(){
+    this.number++;
 }
 
 }

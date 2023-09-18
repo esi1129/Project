@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import {SwitchPageComponent} from "./switch-page/switch-page.component";
 import {MenuComponent} from "./menu/menu.component";
 import {FormsModule} from "@angular/forms";
+import {FormComponent} from "./form/form.component";
 
 @NgModule({
   declarations: [
     MenuComponent,
+    FormComponent,
     SwitchPageComponent,
     AppComponent
   ],
