@@ -2,10 +2,10 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angula
 
 @Component({
   selector: 'switch-page-component',
-  templateUrl: './switch-page.component.html',
-  styleUrls: ['switch-page.component.css']
+  templateUrl: './home-page.component.html',
+  styleUrls: ['home-page.component.css']
 })
-export class SwitchPageComponent implements OnInit {
+export class HomePageComponent implements OnInit {
 
   //variables
 
