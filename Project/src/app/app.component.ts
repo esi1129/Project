@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild, ViewEncapsulation} from '@angular/core';
-import {SwitchPageComponent} from './switch-page/switch-page.component';
+import {HomePageComponent} from './home-page/home-page.component';
 
 @Component({
   selector: 'app-root',
@@ -20,9 +20,9 @@ export class AppComponent implements OnInit,AfterViewInit{
   //changes on element ref not secure in DOM must be use renderer
 
   @ViewChild('app', {static : true}) apps : ElementRef | undefined;
-  @ViewChild(SwitchPageComponent , { read : SwitchPageComponent}) SPComponent : SwitchPageComponent | undefined;
+  @ViewChild(HomePageComponent , { read : HomePageComponent}) SPComponent : HomePageComponent | undefined;
 
-  //if you have some same component use @ViewChildren(SwitchPageComponent , { read : SwitchPageComponent}) SPComponent : Query<SwitchPageComponent> | undefined;
+  //if you have some same component use @ViewChildren(HomePageComponent , { read : HomePageComponent}) SPComponent : Query<HomePageComponent> | undefined;
   //in ngAfterViewInit this.SPComponent.forEach((comp => (comp.increment();))
 
 
@@ -37,7 +37,7 @@ export class AppComponent implements OnInit,AfterViewInit{
   public ngOnInit() {
 
     if (this.apps) {
-      this.apps.nativeElement.innerHTML = "123";
+      this.apps.nativeElement.innerHTML = "Hi everyone";
     }
 
     this.renderer.setStyle(this.apps?.nativeElement,"color",'purple')

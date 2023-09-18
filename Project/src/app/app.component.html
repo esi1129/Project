@@ -1,3 +1,4 @@
+<div style="position: fixed; overflow: hidden; width: 100%; left: 0">
 <div style="background-color: black; border-bottom: 8px solid red">
   <div style="text-align: right">
     <button style="margin: 10px" class="btn btn-primary">Log in</button>
@@ -7,25 +8,32 @@
     <h2 style="color: white">Lilcoomers</h2>
   </div>
   <div style="text-align: center; margin: 15px">
-    <input placeholder="type something...">
-    <button type="submit"><i class="bi bi-search" ></i></button>
+    <input placeholder="type something..." style="width: 350px; background-color: white; color: black;"  class="cursor btn btn-primary">
+    <button type="submit" class="btn btn-primary"><i class="bi bi-search" ></i></button>
   </div>
 </div>
 <!--..................................................................................................................-->
-<nav>
-  <a routerLink="/menu">mm</a>
-  <a routerLink="/home">Heroes</a>
-
+<nav style="background-color: brown;">
+  <a routerLink="/home">home</a>
+  <a routerLink="/menu">menu</a>
+  <a routerLink="/account">account</a>
+  <a routerLink="/form">form</a>
+  <a routerLink="/music">music</a>
 </nav>
+</div>
+<div>
+<b><p #app style="text-align: center">...</p></b>
 <router-outlet></router-outlet>
-<p #app>...</p>
-
+</div>
+<div class="footer" >
+<p>This is footer</p>
+</div>
 <!--[ngSwitch] & *ngSwitchCase-->
 <!--using input variable-->
-<div [ngSwitch]="switchKey">
-  <menu-component *ngSwitchCase="'key1'"></menu-component>
-  <switch-page-component   *ngSwitchCase="'key2'"   [inputVariableName]= 40  (outputVariableName)="emptyFunc()"></switch-page-component>
-  <form-component *ngSwitchCase="'key3'"></form-component>
-</div>
+<!--<div [ngSwitch]="switchKey">-->
+<!--  <menu-component *ngSwitchCase="'key1'"></menu-component>-->
+<!--  <switch-page-component   *ngSwitchCase="'key2'"   [inputVariableName]= 40  (outputVariableName)="emptyFunc()"></switch-page-component>-->
+<!--  <form-component *ngSwitchCase="'key3'"></form-component>-->
+<!--</div>-->
 
 

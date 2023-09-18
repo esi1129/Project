@@ -1,0 +1,25 @@
+nav a{
+  color: white;
+  font-family: "Comic Sans MS", serif;
+  font-size: 20px;
+  margin: 160px;
+  text-decoration: none;
+
+}
+
+.cursor{
+  cursor: auto;
+}
+
+
+.footer {
+  clear: both;
+  height: 150px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
