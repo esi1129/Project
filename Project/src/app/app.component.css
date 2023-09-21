@@ -23,3 +23,34 @@ nav a{
   width: 100%;
   text-align: center;
 }
+
+
+
+.glow-red{
+  border-color: #ff5800;
+  background-image: linear-gradient( 160deg, #ff0000, #44002c);
+  box-shadow: 0 0 60px 8px #ec008c, 0rem 0rem 0px ;
+
+
+}
+.glow-blue{
+  border-color: #1ceeff;
+  background-image: linear-gradient( 160deg, #005fff, #00172d);
+  box-shadow: 0 0 60px 8px #0015ff, 0rem 0rem 0px ;
+
+
+}
+.glow-yellow{
+  border-color: #ffd900;
+  background-image: linear-gradient( 160deg, #ffd900, #5b5002);
+  box-shadow: 0 0 60px 8px #ff8c00, 0rem 0rem 0px ;
+
+
+}
+.glow-green{
+  border-color: #10ff00;
+  background-image: linear-gradient( 160deg, #00933d, #002d09);
+  box-shadow: 0 0 60px 8px #015b09, 0rem 0rem 0px ;
+
+
+}
